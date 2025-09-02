@@ -1,0 +1,39 @@
+:root{
+    --bg1:#062826; --bg2:#0f3b36; --accent:#17a589; --card: rgba(255,255,255,0.06);
+    --muted: rgba(255,255,255,0.78);
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%;margin:0;font-family:Inter, Arial, sans-serif;background:linear-gradient(135deg,var(--bg1),var(--bg2));color:#fff}
+  .topbar{display:flex;justify-content:space-between;align-items:center;padding:14px 18px;background:linear-gradient(90deg, rgba(0,0,0,0.22), rgba(255,255,255,0.02));backdrop-filter: blur(6px);position:sticky;top:0;z-index:20}
+  .brand .big{font-size:28px;font-weight:800;color:var(--accent);letter-spacing:1px}
+  .brand .title{font-family:'Amiri', serif;font-size:18px}
+  .brand .subtitle{font-size:12px;opacity:0.9}
+  .controls-ltr{display:flex;gap:8px;align-items:center;direction:ltr}
+  .controls-ltr input{padding:8px 10px;border-radius:10px;border:none;min-width:240px;background:rgba(255,255,255,0.06);color:#fff}
+  .controls-ltr select{padding:8px;border-radius:10px;border:none;background:rgba(255,255,255,0.06);color:#fff}
+  .btn{background:var(--accent);color:#fff;border:none;padding:8px 10px;border-radius:8px;cursor:pointer;box-shadow:0 6px 18px rgba(0,0,0,0.3)}
+  .btn.small{padding:6px 8px;font-size:0.9rem}
+  .layout{display:grid;grid-template-columns:320px 1fr;gap:18px;padding:18px;align-items:start}
+  .card{background:var(--card);padding:12px;border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,0.38)}
+  .sidebar .card{margin-bottom:12px}
+  .surah-list{max-height:68vh;overflow:auto}
+  .surah-item{display:flex;justify-content:space-between;align-items:center;padding:10px;border-radius:10px;margin-bottom:8px;cursor:pointer;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01))}
+  .surah-item:hover{transform:translateX(6px);background:linear-gradient(90deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02))}
+  .surah-item .meta{font-size:12px;color:var(--muted);direction:ltr}
+  .content{padding:18px;min-height:60vh}
+  .surah-header{display:flex;justify-content:space-between;align-items:center;gap:12px}
+  .player{display:flex;gap:8px;align-items:center;direction:ltr}
+  .verses{margin-top:16px}
+  .verse{padding:14px;border-radius:10px;margin-bottom:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));display:flex;justify-content:space-between;gap:12px}
+  .text{max-width:78%}
+  .arabic{font-family:'Amiri', serif;font-size:26px;text-align:right;line-height:1.9}
+  .translation{color:var(--muted);margin-top:8px;text-align:left;font-size:0.95rem}
+  .ayah-actions{display:flex;flex-direction:column;gap:6px;align-items:flex-end}
+  .bookmark-btn{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:6px;border-radius:8px;cursor:pointer;color:#fff}
+  .footer{text-align:center;padding:10px;margin-top:14px;opacity:0.9}
+  .muted{color:var(--muted);font-size:0.95rem}
+  @media (max-width:900px){
+    .layout{grid-template-columns:1fr;padding:12px}
+    .controls-ltr input{min-width:120px}
+  }
+  
