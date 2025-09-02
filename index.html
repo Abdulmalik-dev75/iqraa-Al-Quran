@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ogechina — ATM5 Quran (TaskFutures)</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Amiri&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css" />
+  <meta name="theme-color" content="#114b45">
+  <!-- Adhan (optional) -->
+  <script src="https://unpkg.com/adhan/dist/Adhan.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="big">ATM5</div>
+      <div class="title">Ogechina — القرآن الكريم</div>
+      <div class="subtitle">TaskFutures</div>
+    </div>
+
+    <div class="controls-ltr">
+      <input id="search" placeholder="Search Arabic or translation..." />
+      <select id="reciterSelect" title="Choose reciter"></select>
+      <button id="installBtn" class="btn" hidden>Install</button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="sidebar card">
+      <section>
+        <h3>السور / Surahs</h3>
+        <div id="surahList" class="surah-list">Loading…</div>
+      </section>
+
+      <section class="card small">
+        <h3>Bookmarks</h3>
+        <ul id="bookmarks"></ul>
+        <div style="display:flex;gap:8px;margin-top:8px">
+          <button id="clearBookmarks" class="btn small">Clear</button>
+          <button id="exportBookmarks" class="btn small">Export</button>
+        </div>
+      </section>
+
+      <section class="card small">
+        <h3>Offline</h3>
+        <div class="muted">Opened surahs are cached for offline reading.</div>
+        <button id="clearCache" class="btn small">Clear Cache</button>
+      </section>
+    </aside>
+
+    <section class="content card">
+      <div class="surah-header">
+        <h2 id="surahTitle">اختر السورة — Select a Surah</h2>
+
+        <div class="player">
+          <button id="prevAyah" class="btn small">⏮</button>
+          <button id="playPause" class="btn small">▶</button>
+          <button id="nextAyah" class="btn small">⏭</button>
+          <input id="seek" type="range" min="0" max="100" value="0" />
+        </div>
+      </div>
+
+      <div id="verses" class="verses">
+        افتح سورة من القائمة لعرض الآيات — Open a Surah from the list.
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer card">
+    <small>© TaskFutures — Ogechina. Replace branding & confirm licenses before publishing.</small>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
